@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:touch_dice/utils/colors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -6,11 +7,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
-        title: const Text('Choose game mode'),
+        title: Text("Touch Dice",
+            style: Theme.of(context).textTheme.headlineLarge),
+        backgroundColor: kCardBackgroundColor,
         centerTitle: true,
-        backgroundColor: Colors.black,
         actions: [
           IconButton(
             onPressed: () {
