@@ -16,6 +16,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Touch Dice',
       initialRoute: '/First-Page', // Set the default route
+      unknownRoute: GetPage(
+        name: '/not-found',
+        page: () => Scaffold(
+          appBar: AppBar(title: const Text('Page Not Found')),
+          body: const Center(
+              child: Text('The page you are looking for does not exist.')),
+        ),
+      ),
       getPages: Routes.routes, // Pass the routes defined in Routes class
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor, // App background color
