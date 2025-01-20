@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:touch_dice/utils/colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
                         label: "Winners",
                         onPressed: () {
                           // Navigate to Winners page
-                          print("Winners clicked");
+                          Get.toNamed('/Winner-Page');
                         },
                         isHighlighted: true, // Highlight Winners by default
                       ),
@@ -57,15 +58,31 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20),
+
                   // Numbering Button
-                  _buildGameModeCard(
-                    context,
-                    icon: Icons.format_list_numbered,
-                    label: "Numbering",
-                    onPressed: () {
-                      // Navigate to Numbering page
-                      print("Numbering clicked");
-                    },
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildGameModeCard(
+                        context,
+                        icon: Icons.format_list_numbered,
+                        label: "Numbering",
+                        onPressed: () {
+                          // Navigate to Numbering page
+                          print("Numbering clicked");
+                        },
+                      ),
+                      // Numbering Button
+                      _buildGameModeCard(
+                        context,
+                        icon: Icons.format_list_numbered,
+                        label: "Numbering",
+                        onPressed: () {
+                          // Navigate to Numbering page
+                          print("Numbering clicked");
+                        },
+                      ),
+                    ],
                   ),
                 ],
               ),
